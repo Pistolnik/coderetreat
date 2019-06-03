@@ -17,8 +17,9 @@ public class ArrayOperationsTest {
 
         Integer[] tops = ArrayOperations.topN(array, 3);
 
-        assertEquals(3, tops.length);
-        assertTrue(asList(tops).containsAll(asList(15, 8, 7)));
+        assertNotNull("tops should not be null", tops);
+        assertEquals("tops should contain 3 elements", 3, tops.length);
+        assertTrue("tops should contain elements 15, 8 and 7", asList(tops).containsAll(asList(15, 8, 7)));
     }
 
     @Test

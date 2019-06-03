@@ -30,7 +30,8 @@ public class LifeBoardTest {
 
         board.nextState();
 
-        assertTrue(board.contains(10, 2, BEEHIVE));
+        assertNotNull("board should not be null", board);
+        assertTrue("beehive should not move", board.contains(9, 2, BEEHIVE));
     }
 
     @Test
